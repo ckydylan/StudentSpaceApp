@@ -24,6 +24,7 @@
         <activity android:name=".activity.CalculatorActivity"/>
         <activity android:name=".activity.ToolActivity"/>
         <activity android:name=".activity.ClassManageActivity"/>
+        <activity android:name=".activity.MusicActivity"/>
     </application>
 
 </manifest>
