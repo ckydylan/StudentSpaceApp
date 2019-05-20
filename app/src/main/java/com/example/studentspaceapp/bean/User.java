@@ -1,16 +1,13 @@
 package com.example.studentspaceapp.bean;
 
-public class User {
-    private String id;
+import cn.bmob.v3.BmobObject;
+
+public class User extends BmobObject {
     private String userName;
     private String password;
 
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
+    public User(){
+        this.setTableName("Student");
     }
 
     public String getUserName() {

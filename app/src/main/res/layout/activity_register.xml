@@ -59,7 +59,8 @@
             android:hint=" 用户名"
             android:textColorHint="@color/colorCursor"
             android:textCursorDrawable="@drawable/color_cursor"
-            android:textSize="15sp" />
+            android:textSize="15sp"
+            android:textColor="#000"/>
 
         <ImageView
             android:id="@+id/iv_unameClear"
@@ -114,7 +115,8 @@
             android:inputType="textPassword"
             android:textColorHint="@color/colorCursor"
             android:textCursorDrawable="@drawable/color_cursor"
-            android:textSize="15sp" />
+            android:textSize="15sp"
+            android:textColor="#000"/>
 
         <ImageView
             android:id="@+id/iv_pwdClear"
@@ -168,7 +170,8 @@
             android:inputType="textPassword"
             android:textColorHint="@color/colorCursor"
             android:textCursorDrawable="@drawable/color_cursor"
-            android:textSize="15sp" />
+            android:textSize="15sp"
+            android:textColor="#000"/>
 
         <ImageView
             android:id="@+id/iv_pwdClear2"

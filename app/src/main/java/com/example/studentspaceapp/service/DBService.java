@@ -61,11 +61,11 @@ public class DBService {
                     if(rs!=null){
                         while(rs.next()){
                             User u=new User();
-                            u.setId(rs.getString("id"));
+//                            u.setId(rs.getString("id"));
                             u.setUserName(rs.getString("username"));
                             u.setPassword(rs.getString("password"));
                             list.add(u);
-                            Log.e("DBid",u.getId());
+//                            Log.e("DBid",u.getId());
                         }
                     }
                 }

@@ -35,6 +35,4 @@ public class MainActivity extends AppCompatActivity {
                         R.drawable.item3_after)
                 .build();
     }
-
-
 }
