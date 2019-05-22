@@ -15,20 +15,7 @@ import com.example.studentspaceapp.R;
 import com.example.studentspaceapp.bean.User;
 import com.example.studentspaceapp.utils.EditTextClearTools;
 import com.google.android.material.snackbar.Snackbar;
-import com.google.gson.JsonArray;
 
-
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
-import java.util.List;
-import java.util.Locale;
 
 import cn.bmob.v3.Bmob;
 import cn.bmob.v3.BmobQuery;
@@ -84,7 +71,6 @@ public class LoginActivity extends Activity {
             startActivity(intent);
         });
 
-
 }
 
     private void init() {
@@ -107,9 +93,9 @@ public class LoginActivity extends Activity {
             @Override
             public void done(User bmobUser, BmobException e) {
                 if (e == null) {
-                    Snackbar.make(view, "登录成功：" + user.getUsername(), Snackbar.LENGTH_LONG).show();
-                    Intent intent = new Intent(LoginActivity.this, MainActivity.class);
-                    startActivity(intent);
+                        Snackbar.make(view, "登录成功：" + user.getUsername(), Snackbar.LENGTH_LONG).show();
+                        Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                        startActivity(intent);
                 } else {
                     Snackbar.make(view, "登录失败：" + e.getMessage(), Snackbar.LENGTH_LONG).show();
                 }
@@ -160,7 +146,10 @@ public class LoginActivity extends Activity {
             public void done(User user, BmobException e) {
                 if(user!=null){
                     if (e == null) {
-                        Toast.makeText(LoginActivity.this, "短信验证成功", Toast.LENGTH_SHORT).show();
+                        Log.e("bmob","短信登陆成功");
+                        Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                        startActivity(intent);
+//                        Toast.makeText(LoginActivity.this, "短信验证成功", Toast.LENGTH_SHORT).show();
                     } else {
 //                        mTvInfo.append("短信登录失败：" + e.getErrorCode() + "-" + e.getMessage() + "\n");
                     }
@@ -168,6 +157,4 @@ public class LoginActivity extends Activity {
             }
         });
     }
-
-
 }

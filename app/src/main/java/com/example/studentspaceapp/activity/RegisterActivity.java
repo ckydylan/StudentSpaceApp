@@ -31,6 +31,7 @@ public class RegisterActivity extends Activity {
     EditText et_sure_phone;
     Button btn_register;
     Button btn_send_phone;
+    Boolean flag = true;
 
 
 
@@ -71,8 +72,12 @@ public class RegisterActivity extends Activity {
                 Toast.makeText(this, "密码不得为空", Toast.LENGTH_SHORT).show();
             }else if (!et_password.getText().toString().equals(et_password2.getText().toString())){
                 Toast.makeText(this, "两次密码不同", Toast.LENGTH_SHORT).show();
+            }else if (et_phone.getText().toString().equals("")){
+                Toast.makeText(this, "电话号码不得为空", Toast.LENGTH_SHORT).show();
+            }else if (et_sure_phone.getText().toString().equals("")){
+                Toast.makeText(this, "验证码不为空", Toast.LENGTH_SHORT).show();
             }else {
-                verifyCode();
+                signUp();
             }
         });
 
@@ -87,11 +92,7 @@ public class RegisterActivity extends Activity {
             @Override
             public void done(User user, BmobException e) {
                 if (e == null) {
-                    Log.e("bmob","注册成功：");
-                    Toast.makeText(RegisterActivity.this, "注册成功", Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(RegisterActivity.this,MainActivity.class);
-                    startActivity(intent);
-//                    RegisterActivity.this.finish();
+                    verifyCode();
                 } else {
                     Toast.makeText(RegisterActivity.this, "注册失败,用户名以存在，请重新输入用户名", Toast.LENGTH_SHORT).show();
                 }
@@ -103,22 +104,22 @@ public class RegisterActivity extends Activity {
         BmobSMS.verifySmsCode(et_phone.getText().toString(), et_sure_phone.getText().toString(), new UpdateListener() {
             @Override
             public void done(BmobException e) {
+
                 if (e == null) {
                     Log.e("bmob", "验证码验证成功，您可以在此时进行绑定操作：");
                     Toast.makeText(RegisterActivity.this, "验证码验证成功，您可以在此时进行绑定操作！", Toast.LENGTH_SHORT).show();
                     User user = BmobUser.getCurrentUser(User.class);
-//                    user.setMobilePhoneNumber(et_phone.getText().toString());
+                    user.setMobilePhoneNumber(et_phone.getText().toString());
                     Log.e("bmob", et_phone.getText().toString());
-//                    user.setMobilePhoneNumberVerified(true);
+                    user.setMobilePhoneNumberVerified(true);
                     user.update(new UpdateListener() {
                         @Override
                         public void done(BmobException e) {
                             if (e == null) {
-                                signUp();
-                                Log.e("bmob", "绑定手机号码成功：");
-                                Toast.makeText(RegisterActivity.this, "绑定手机号码成功", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(RegisterActivity.this, "注册成功", Toast.LENGTH_SHORT).show();
+                                Intent intent = new Intent(RegisterActivity.this,MainActivity.class);
+                                startActivity(intent);
                             } else {
-                                Log.e("bmob", "绑定手机号码失败：");
                                 Toast.makeText(RegisterActivity.this, "绑定手机号码失败：" + e.getErrorCode() + "-" + e.getMessage(), Toast.LENGTH_SHORT).show();
                             }
                         }
@@ -127,6 +128,7 @@ public class RegisterActivity extends Activity {
                     Log.e("bmob",et_phone.getText().toString());
                     Log.e("bmob","验证码验证失败：" + e.getErrorCode() + "-" + e.getMessage());
                     Toast.makeText(RegisterActivity.this, "验证码验证失败：" + e.getErrorCode() + "-" + e.getMessage(), Toast.LENGTH_SHORT).show();
+                    flag = false;
                 }
             }
         });

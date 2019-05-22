@@ -63,7 +63,7 @@
             android:layout_toRightOf="@id/viewName"
             android:background="@null"
             android:ems="19"
-            android:hint=" 用户名"
+            android:hint=" 用户名/手机号"
             android:textColorHint="@color/colorCursor"
             android:textCursorDrawable="@drawable/color_cursor"
             android:textSize="15sp"
@@ -179,5 +179,7 @@
         android:text="注册"
         android:textColor="#fff"
         android:textSize="18sp" />
-    
+
+
+
 </RelativeLayout>
