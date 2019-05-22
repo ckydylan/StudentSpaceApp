@@ -1,28 +1,24 @@
 package com.example.studentspaceapp.bean;
 
-import cn.bmob.v3.BmobObject;
+import cn.bmob.v3.BmobUser;
 
-public class User extends BmobObject {
-    private String userName;
-    private String password;
+public class User extends BmobUser {
+   private String nickname;
+   private Integer age;
 
-    public User(){
-        this.setTableName("Student");
+    public String getNickname() {
+        return nickname;
     }
 
-    public String getUserName() {
-        return userName;
+    public void setNickname(String nickname) {
+        this.nickname = nickname;
     }
 
-    public void setUserName(String usercount) {
-        this.userName = usercount;
+    public Integer getAge() {
+        return age;
     }
 
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
+    public void setAge(Integer age) {
+        this.age = age;
     }
 }

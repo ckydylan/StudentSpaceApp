@@ -54,4 +54,5 @@ dependencies {
     //CDN文件服务使用okhttp相关包进行文件的上传和下载（必填）
     implementation 'com.squareup.okio:okio:1.4.0'
     implementation files('libs/fastjson-1.2.53.jar')
+    implementation 'com.google.android.material:material:1.0.0'
 }

@@ -34,13 +34,20 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity.RegisterActivity"/>
-        <activity android:name=".activity.MainActivity"/>
-        <activity android:name=".activity.ChangeInfoActivity"/>
-        <activity android:name=".activity.CalculatorActivity"/>
-        <activity android:name=".activity.ToolActivity"/>
-        <activity android:name=".activity.ClassManageActivity"/>
-        <activity android:name=".activity.MusicActivity"/>
+        <activity android:name=".activity.RegisterActivity"
+            android:launchMode="singleTask"/>
+        <activity android:name=".activity.MainActivity"
+            android:launchMode="singleTop"/>
+        <activity android:name=".activity.ChangeInfoActivity"
+            android:launchMode="singleTop"/>
+        <activity android:name=".activity.CalculatorActivity"
+            android:launchMode="singleInstance"/>
+        <activity android:name=".activity.ToolActivity"
+            android:launchMode="singleTop"/>
+        <activity android:name=".activity.ClassManageActivity"
+            android:launchMode="singleTop"/>
+        <activity android:name=".activity.MusicActivity"
+            android:launchMode="singleTop"/>
     </application>
 
 </manifest>

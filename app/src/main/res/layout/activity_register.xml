@@ -131,6 +131,7 @@
     </RelativeLayout>
 
     <RelativeLayout
+        android:id="@+id/rl_userPassword2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/rl_userPassword"
@@ -185,6 +186,127 @@
 
     </RelativeLayout>
 
+    <RelativeLayout
+        android:id="@+id/rl_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_userPassword2"
+        android:layout_marginTop="1dp"
+        android:background="@drawable/rectangle_edittext">
+
+        <ImageView
+            android:id="@+id/iv_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:paddingBottom="15dp"
+            android:paddingLeft="15dp"
+            android:paddingTop="15dp"
+            android:src="@mipmap/ic_edittextphone" />
+
+        <View
+            android:id="@+id/viewPhone"
+            android:layout_width="1dip"
+            android:layout_height="20dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/iv_phone"
+            android:background="@color/colorCursor" />
+
+        <EditText
+            android:id="@+id/et_phone"
+            android:layout_width="250dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/viewPhone"
+            android:background="@null"
+            android:drawablePadding="5dp"
+            android:ems="19"
+            android:hint=" 请输入电话号码"
+            android:textColorHint="@color/colorCursor"
+            android:textCursorDrawable="@drawable/color_cursor"
+            android:textSize="15sp"
+            android:textColor="#000"/>
+
+        <ImageView
+            android:id="@+id/iv_pwdClear3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:src="@mipmap/ic_backspace_grey600_24dp"
+            android:visibility="invisible" />
+
+        <Button
+            android:id="@+id/btn_send_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/et_phone"
+            android:layout_marginTop="5dp"
+            android:background="#bbb"
+            android:text="发送验证码"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_sure_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_phone"
+        android:layout_marginTop="1dp"
+        android:background="@drawable/rectangle_edittext">
+
+        <ImageView
+            android:id="@+id/iv_sure_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:paddingBottom="15dp"
+            android:paddingLeft="15dp"
+            android:paddingTop="15dp"
+            android:src="@mipmap/ic_edittextphone" />
+
+        <View
+            android:id="@+id/viewSurePhone"
+            android:layout_width="1dip"
+            android:layout_height="20dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/iv_sure_phone"
+            android:background="@color/colorCursor" />
+
+        <EditText
+            android:id="@+id/et_sure_phone"
+            android:layout_width="250dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/viewSurePhone"
+            android:background="@null"
+            android:drawablePadding="5dp"
+            android:ems="19"
+            android:hint=" 请输入验证码"
+            android:textColorHint="@color/colorCursor"
+            android:textCursorDrawable="@drawable/color_cursor"
+            android:textSize="15sp"
+            android:textColor="#000"/>
+
+        <ImageView
+            android:id="@+id/iv_pwdClear4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:src="@mipmap/ic_backspace_grey600_24dp"
+            android:visibility="invisible" />
+
+
+    </RelativeLayout>
+
 
 
 
@@ -194,7 +316,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/tv_title"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="280dp"
+        android:layout_marginTop="380dp"
         android:background="@drawable/round_corner_bg"
         android:gravity="center"
         android:padding="10dp"
