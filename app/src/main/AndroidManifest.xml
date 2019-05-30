@@ -48,6 +48,10 @@
             android:launchMode="singleTask"/>
         <activity android:name=".activity.MusicActivity"
             android:launchMode="singleTask"/>
+        <activity android:name=".activity.ChooseHeadImgActivity"
+            android:launchMode="singleTask"/>
+        <activity android:name=".activity.InfoActivity"
+            android:launchMode="singleTask"/>
     </application>
 
 </manifest>

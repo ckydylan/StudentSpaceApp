@@ -60,6 +60,7 @@ public class RegisterActivity extends Activity {
                     }
                 }
             });
+//            Toast.makeText(this, "FUCK YOU，别想消耗我次数", Toast.LENGTH_LONG).show();
         });
 
         btn_register.setOnClickListener(v->{

@@ -66,7 +66,6 @@ public class MusicActivity extends Activity {
         map.put("rightImg",R.drawable.music_img_right);
         list.add(map);
 
-
         return list;
     }
 }
