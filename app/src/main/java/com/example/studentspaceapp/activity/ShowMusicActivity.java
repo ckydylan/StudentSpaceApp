@@ -149,7 +149,6 @@ public class ShowMusicActivity extends AppCompatActivity implements IPlayInfo, V
     }
 
     private void initMusicDatas() {
-        //todo ---增加数据
         int[] image = {R.raw.ic_music1,R.raw.ic_music2,R.raw.ic_music3,R.raw.ic_music4,R.raw.ic_music5,R.raw.ic_music6,R.raw.ic_music7,R.raw.ic_music8};
         int[] music = {R.raw.music1,R.raw.music2,R.raw.music3,R.raw.music4,R.raw.music5,R.raw.music6,R.raw.music7,R.raw.music8};
         String[] title = {"陪我长大","身骑白马","倒数","某某","爱殇","寻","Nightingale","Cornfield Chase"};
