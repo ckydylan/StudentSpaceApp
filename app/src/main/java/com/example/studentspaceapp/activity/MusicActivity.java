@@ -35,41 +35,18 @@ public class MusicActivity extends Activity {
 
     private ArrayList<Map<String, Object>> getData() {
         ArrayList<Map<String, Object>> list = new ArrayList<>();
-        map = new HashMap<>();
-        map.put("image", R.mipmap.music_img1);
-        map.put("title","陪我长大");
-        map.put("author","火箭少女101段奥娟");
-        map.put("rightImg",R.mipmap.music_img_right);
-        list.add(map);
-
-        map = new HashMap<>();
-        map.put("image",R.mipmap.music_img2);
-        map.put("title","身骑白马");
-        map.put("author","徐佳莹");
-        map.put("rightImg",R.mipmap.music_img_right);
-        list.add(map);
-
-        map = new HashMap<>();
-        map.put("image",R.mipmap.music_img3);
-        map.put("title","倒数");
-        map.put("author","G.E.M.邓紫棋");
-        map.put("rightImg",R.mipmap.music_img_right);
-        list.add(map);
-
-        map = new HashMap<>();
-        map.put("image",R.mipmap.music_img4);
-        map.put("title","某某");
-        map.put("author","孟凡明");
-        map.put("rightImg",R.mipmap.music_img_right);
-        list.add(map);
-
-        map = new HashMap<>();
-        map.put("image",R.mipmap.music_img5);
-        map.put("title","爱殇");
-        map.put("author","小时/龚骏");
-        map.put("rightImg",R.mipmap.music_img_right);
-        list.add(map);
-
+        int[] image = {R.raw.ic_music1,R.raw.ic_music2,R.raw.ic_music3,R.raw.ic_music4,R.raw.ic_music5,R.raw.ic_music6,R.raw.ic_music7,R.raw.ic_music8};
+        String[] title = {"陪我长大","身骑白马","倒数","某某","爱殇","寻","Nightingale","Cornfield Chase"};
+        String[] author = {"火箭少女101段奥娟","徐佳莹","G.E.M.邓紫棋","孟凡明","小时/龚骏","三亩地","YANI","Hans Zimmer"};
+        int rightImg = R.raw.music_img_right;
+        for (int i = 0; i < image.length; i++) {
+            map = new HashMap<>();
+            map.put("image", image[i]);
+            map.put("title",title[i]);
+            map.put("author",author[i]);
+            map.put("rightImg",rightImg);
+            list.add(map);
+        }
         return list;
     }
 }

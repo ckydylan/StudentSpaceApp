@@ -17,6 +17,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class ClassManageActivity extends Activity implements AdapterView.OnItemClickListener {
+    Map<String, Object> map;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,31 +35,16 @@ public class ClassManageActivity extends Activity implements AdapterView.OnItemC
 
     private ArrayList<Map<String, Object>> getData() {
         ArrayList<Map<String, Object>> list = new ArrayList<>();
-        Map<String, Object> map;
-        map = new HashMap<>();
-        map.put("image", R.drawable.class_java);
-        map.put("title", "Java");
-        map.put("info", "我是Java");
-        list.add(map);
-
-        map = new HashMap<>();
-        map.put("image", R.drawable.class_android);
-        map.put("title", "Android");
-        map.put("info", "我是Android");
-        list.add(map);
-
-        map = new HashMap<>();
-        map.put("image", R.drawable.class_python);
-        map.put("title", "Python");
-        map.put("info", "我是Python");
-        list.add(map);
-
-        map = new HashMap<>();
-        map.put("image", R.drawable.class_mysql);
-        map.put("title", "Mysql");
-        map.put("info", "我是Mysql");
-        list.add(map);
-
+        int[] image = {R.drawable.class_java,R.drawable.class_android,R.drawable.class_python,R.drawable.class_mysql};
+        String[] title = {"Java","Android","Python","Mysql"};
+        String[] info = {"我是Java","我是Android","我是Python","我是Mysql"};
+        for (int i = 0; i < image.length; i++) {
+            map = new HashMap<>();
+            map.put("image",image[i]);
+            map.put("title", title[i]);
+            map.put("info", info[i]);
+            list.add(map);
+        }
         return list;
     }
 
