@@ -52,6 +52,8 @@
             android:launchMode="singleTask"/>
         <activity android:name=".activity.InfoActivity"
             android:launchMode="singleTask"/>
+        <activity android:name=".activity.ShowMusicActivity"
+            android:launchMode="singleTask"/>
     </application>
 
 </manifest>
