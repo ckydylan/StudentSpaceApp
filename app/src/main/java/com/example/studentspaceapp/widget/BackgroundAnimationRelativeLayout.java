@@ -21,7 +21,7 @@ import com.example.studentspaceapp.R;
 /**
  * 自定义一个控件，继承RelativeLayout
  * */
-public class BackgourndAnimationRelativeLayout extends RelativeLayout {
+public class BackgroundAnimationRelativeLayout extends RelativeLayout {
 
     private final int DURATION_ANIMATION = 500;
     private final int INDEX_BACKGROUND = 0;
@@ -34,15 +34,15 @@ public class BackgourndAnimationRelativeLayout extends RelativeLayout {
     private ObjectAnimator objectAnimator;
     private int musicPicRes = -1;
 
-    public BackgourndAnimationRelativeLayout(Context context) {
+    public BackgroundAnimationRelativeLayout(Context context) {
         this(context, null);
     }
 
-    public BackgourndAnimationRelativeLayout(Context context, AttributeSet attrs) {
+    public BackgroundAnimationRelativeLayout(Context context, AttributeSet attrs) {
         this(context, attrs, 0);
     }
 
-    public BackgourndAnimationRelativeLayout(Context context, AttributeSet attrs, int
+    public BackgroundAnimationRelativeLayout(Context context, AttributeSet attrs, int
             defStyleAttr) {
         super(context, attrs, defStyleAttr);
         initLayerDrawable();
@@ -70,7 +70,7 @@ public class BackgourndAnimationRelativeLayout extends RelativeLayout {
                 int foregroundAlpha = (int) ((float) animation.getAnimatedValue() * 255);
                 /*动态设置Drawable的透明度，让前景图逐渐显示*/
                 layerDrawable.getDrawable(INDEX_FOREGROUND).setAlpha(foregroundAlpha);
-                BackgourndAnimationRelativeLayout.this.setBackground(layerDrawable);
+                BackgroundAnimationRelativeLayout.this.setBackground(layerDrawable);
             }
         });
         objectAnimator.addListener(new Animator.AnimatorListener() {

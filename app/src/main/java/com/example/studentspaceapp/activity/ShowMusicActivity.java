@@ -1,7 +1,6 @@
 package com.example.studentspaceapp.activity;
 
 
-import android.app.Activity;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
@@ -33,7 +32,7 @@ import com.example.studentspaceapp.model.MusicData;
 import com.example.studentspaceapp.service.MusicService;
 import com.example.studentspaceapp.utils.DisplayUtil;
 import com.example.studentspaceapp.utils.FastBlurUtil;
-import com.example.studentspaceapp.widget.BackgourndAnimationRelativeLayout;
+import com.example.studentspaceapp.widget.BackgroundAnimationRelativeLayout;
 import com.example.studentspaceapp.widget.DiscView;
 
 import java.io.Serializable;
@@ -44,13 +43,14 @@ import static com.example.studentspaceapp.widget.DiscView.*;
 
 
 public class ShowMusicActivity extends AppCompatActivity implements IPlayInfo, View
-        .OnClickListener{
+        .OnClickListener {
+
     private DiscView mDisc;
     private Toolbar mToolbar;
     private SeekBar mSeekBar;
     private ImageView mIvPlayOrPause, mIvNext, mIvLast;
     private TextView mTvMusicDuration,mTvTotalMusicDuration;
-    private BackgourndAnimationRelativeLayout mRootLayout;
+    private BackgroundAnimationRelativeLayout mRootLayout;
     public static final int MUSIC_MESSAGE = 0;
 
     public static final String PARAM_MUSIC_LIST = "PARAM_MUSIC_LIST";

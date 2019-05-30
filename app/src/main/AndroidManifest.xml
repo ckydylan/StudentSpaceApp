@@ -54,6 +54,11 @@
             android:launchMode="singleTask"/>
         <activity android:name=".activity.ShowMusicActivity"
             android:launchMode="singleTask"/>
+        <service
+            android:name=".service.MusicService"
+            android:enabled="true"
+            android:exported="false"
+            />
     </application>
 
 </manifest>
