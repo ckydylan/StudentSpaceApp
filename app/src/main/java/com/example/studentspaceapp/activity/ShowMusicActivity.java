@@ -149,7 +149,7 @@ public class ShowMusicActivity extends AppCompatActivity implements IPlayInfo, V
     }
 
     private void initMusicDatas() {
-        int[] image = {R.raw.ic_music1,R.raw.ic_music2,R.raw.ic_music3,R.raw.ic_music4,R.raw.ic_music5,R.raw.ic_music6,R.raw.ic_music7,R.raw.ic_music8};
+        int[] image = {R.mipmap.ic_music1,R.mipmap.ic_music2,R.mipmap.ic_music3,R.mipmap.ic_music4,R.mipmap.ic_music5,R.mipmap.ic_music6,R.mipmap.ic_music7,R.mipmap.ic_music8};
         int[] music = {R.raw.music1,R.raw.music2,R.raw.music3,R.raw.music4,R.raw.music5,R.raw.music6,R.raw.music7,R.raw.music8};
         String[] title = {"陪我长大","身骑白马","倒数","某某","爱殇","寻","Nightingale","Cornfield Chase"};
         String[] author = {"火箭少女101段奥娟","徐佳莹","G.E.M.邓紫棋","孟凡明","小时/龚骏","三亩地","YANI","Hans Zimmer"};
@@ -159,7 +159,6 @@ public class ShowMusicActivity extends AppCompatActivity implements IPlayInfo, V
             MusicData musicData = new MusicData(music[i],image[i],title[i],author[i]);
             mMusicDatas.add(musicData);
         }
-
 
         Intent intent = new Intent(this, MusicService.class);
         intent.putExtra(PARAM_MUSIC_LIST, (Serializable) mMusicDatas);
@@ -338,6 +337,7 @@ public class ShowMusicActivity extends AppCompatActivity implements IPlayInfo, V
         }
     }
 
+    /*发送广播*/
     private void optMusic(final String action) {
         LocalBroadcastManager.getInstance(this).sendBroadcast(new Intent(action));
     }

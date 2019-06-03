@@ -69,8 +69,10 @@ public class RegisterActivity extends Activity {
             user.setPassword(et_password.getText().toString());
             if (et_userName.getText().toString().equals("")){
                 Toast.makeText(this, "用户名不得为空", Toast.LENGTH_SHORT).show();
-            }else if (et_password.getText().toString().equals("")){
+            }else if (et_password.getText().toString().equals("")) {
                 Toast.makeText(this, "密码不得为空", Toast.LENGTH_SHORT).show();
+            }else if (et_password.length()<6){
+                Toast.makeText(RegisterActivity.this, "密码必须大于6位", Toast.LENGTH_SHORT).show();
             }else if (!et_password.getText().toString().equals(et_password2.getText().toString())){
                 Toast.makeText(this, "两次密码不同", Toast.LENGTH_SHORT).show();
             }else if (et_phone.getText().toString().equals("")){
@@ -89,6 +91,7 @@ public class RegisterActivity extends Activity {
         final User user = new User();
         user.setUsername(et_userName.getText().toString());
         user.setPassword(et_password.getText().toString());
+        user.setCountry("china");
         user.signUp(new SaveListener<User>() {
             @Override
             public void done(User user, BmobException e) {

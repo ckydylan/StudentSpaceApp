@@ -35,7 +35,7 @@ public class MusicActivity extends Activity {
 
     private ArrayList<Map<String, Object>> getData() {
         ArrayList<Map<String, Object>> list = new ArrayList<>();
-        int[] image = {R.raw.ic_music1,R.raw.ic_music2,R.raw.ic_music3,R.raw.ic_music4,R.raw.ic_music5,R.raw.ic_music6,R.raw.ic_music7,R.raw.ic_music8};
+        int[] image = {R.mipmap.ic_music1,R.mipmap.ic_music2,R.mipmap.ic_music3,R.mipmap.ic_music4,R.mipmap.ic_music5,R.mipmap.ic_music6,R.mipmap.ic_music7,R.mipmap.ic_music8};
         String[] title = {"陪我长大","身骑白马","倒数","某某","爱殇","寻","Nightingale","Cornfield Chase"};
         String[] author = {"火箭少女101段奥娟","徐佳莹","G.E.M.邓紫棋","孟凡明","小时/龚骏","三亩地","YANI","Hans Zimmer"};
         int rightImg = R.raw.music_img_right;
